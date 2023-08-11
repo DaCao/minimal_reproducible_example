@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es6",
+    "outDir": "dist",
+    "rootDir": ".",
+    "sourceMap": true,
+    "strict": false,
+    "esModuleInterop": true,
+    "preserveConstEnums": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "sealworker",
+    "paths": {
+      "*": [
+        "*",
+        "node_modules/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts"
+  ],
+  "include": [
+    "**/*"
+  ]
+}
