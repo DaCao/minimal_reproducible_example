@@ -1,8 +1,17 @@
 import { HttpRequest, Context } from "@azure/functions";
 
-import { processJob } from "services/JobProcessor";
-import { Job } from "interfaces/Job";
-import { getMachineInfo } from "utils/machineInfo";
+import { processJob } from "./JobProcessor";
+import { Job } from "../interfaces/Job";
+import { getMachineInfo } from "../utils/machineInfo";
+
+import { BlobServiceClient } from "@azure/storage-blob";
+
+const connectionString = process.env[
+  "AZURE_STORAGE_CONNECTION_STRING"
+] as string;
+
+export const blobServiceClient =
+  BlobServiceClient.fromConnectionString(connectionString);
 
 export const workerExec = async (req: HttpRequest, context: Context) => {
   const machineInfo = getMachineInfo();

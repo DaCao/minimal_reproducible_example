@@ -11,6 +11,7 @@
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
+    "@azure/storage-blob": "^12.15.0",
     "os": "^0.1.2"
   },
   "devDependencies": {

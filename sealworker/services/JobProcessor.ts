@@ -9,7 +9,7 @@
  * @date: 2023-02-13
  */
 import { Context } from "@azure/functions";
-import { Job, JobProgress } from "interfaces/Job";
+import { Job, JobProgress } from "../interfaces/Job";
 /**
  * This is the main function to process a job;
  * @param {object} job - the job to be processed;
